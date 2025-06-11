@@ -45,7 +45,10 @@
         </ul>
         <div class="d-flex ms-3 gap-3 align-items-center">
           <a href="https://www.facebook.com/profile.php?id=61571175728259" target="_blank" class="text-primary fs-5"><i class="bi bi-facebook"></i></a>
-          <a href="https://wa.me/51903026860?text=Hola%2C%20vengo%20de%20tu%20p%C3%A1gina%20web.%20Quisiera%20requerir%20tus%20servicios" target="_blank" class="text-success fs-5"><i class="bi bi-whatsapp"></i></a>
+          
+          <a id="btn-whatsapp" href="#" class="text-success fs-5">
+            <i class="bi bi-whatsapp"></i>
+          </a>
         </div>
       </div>
     </div>
@@ -304,7 +307,7 @@
         <div class="col-md-4 mb-3">
           <h5>Contacto</h5>
           <p><i class="bi bi-envelope"></i> cmvingenieriayconstruccion2024@gmail.com</p>
-          <p><i class="bi bi-phone"></i> +51 949 657 597</p>
+          <p><i class="bi bi-phone"></i> +51 903 026 860</p>
         </div>
       </div>
       <div class="text-center py-3">&copy; 2025 CMV Ingeniería y Construcción</div>
@@ -319,6 +322,19 @@
     AOS.init();
     emailjs.init('ZMQdpphq0NsTiouHx');
   </script>
-  <script src="script.js"></script>
+  <script>
+  document.getElementById("btn-whatsapp").addEventListener("click", function (e) {
+    e.preventDefault();
+
+    // Mensaje sin signos invertidos ni comillas que puedan fallar
+    const mensaje = "Hola! Estoy interesado en sus servicios. Por favor, envíeme más información.";
+    const numero = "51903026860"; // sin +, con 51 para Perú
+
+    const url = "https://wa.me/" + numero + "?text=" + encodeURIComponent(mensaje);
+    window.open(url, "_blank");
+  });
+</script>
+
+<script src="script.js"></script>
 </body>
 </html>

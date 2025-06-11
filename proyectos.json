@@ -1,0 +1,17 @@
+[
+  {
+    "nombre": "Edificio Multifamiliar - San Miguel",
+    "imagen": "assets/proyectos/edificio-san-miguel.jpg",
+    "descripcion": "Construcción completa de edificio residencial de 5 pisos."
+  },
+  {
+    "nombre": "Asesoría de Tesis - Ingeniería Civil",
+    "imagen": "assets/proyectos/asesoria-civil.jpg",
+    "descripcion": "Acompañamiento completo en tesis de estructuras para bachillerato."
+  },
+  {
+    "nombre": "Remodelación de Oficinas - Miraflores",
+    "imagen": "assets/proyectos/oficinas-miraflores.jpg",
+    "descripcion": "Rediseño y acondicionamiento de oficinas empresariales."
+  }
+]

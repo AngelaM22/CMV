@@ -7,24 +7,37 @@ document.addEventListener("DOMContentLoaded", () => {
 function cargarServicios() {
   const servicios = [
     {
-      titulo: "Construcción de Obras",
+      titulo: "Elaboración y ejecución de proyectos civiles",
       imagen: "assets/servicios/construccion.jpg",
-      descripcion: "Diseño y ejecución de obras civiles."
+      descripcion: "Diseño y ejecución de obras civiles.",
+      enlace: "assets/servicios/ejecucion-proyectos.html"
     },
     {
-      titulo: "Asesoría Académica",
+      titulo: "Venta y comercialización de materiales de construcción",
+      imagen: "assets/servicios/materiales.jpg",
+      descripcion: "Comercialización y distribución de materiales de construcción.",
+      enlace: "assets/servicios/venta-materiales.html"
+    },
+    {
+      titulo: "Asesoría académica, redacción de proyectos e informes de tesis",
       imagen: "assets/servicios/asesoria.jpg",
-      descripcion: "Asesoramiento en tesis y trabajos académicos."
+      descripcion: "Asesoramiento en tesis y trabajos académicos.",
+      enlace: "assets/servicios/asesoria-academica.html"
+    },
+    {
+      titulo: "Consultoría y administración de proyectos",
+      imagen: "assets/servicios/consultoria.jpg",
+      descripcion: "Consultoría en ingeniería civil, construcción y proyectos relacionados.",
+      enlace: "assets/servicios/consultoria-proyectos.html"
     }
-    // Puedes agregar más servicios aquí
   ];
 
   const contenedor = document.getElementById("servicios-lista");
-  contenedor.innerHTML = ""; // Limpiar antes de renderizar
+  contenedor.innerHTML = "";
 
-  servicios.forEach(({ titulo, imagen, descripcion }) => {
+  servicios.forEach(({ titulo, imagen, descripcion, enlace }) => {
     const tarjeta = document.createElement("div");
-    tarjeta.className = "col-md-4 mb-4";
+    tarjeta.className = "col-md-6 col-lg-4 mb-4";
 
     tarjeta.innerHTML = `
       <div class="card h-100 shadow-sm border-0">
@@ -32,6 +45,7 @@ function cargarServicios() {
         <div class="card-body">
           <h5 class="card-title">${titulo}</h5>
           <p class="card-text">${descripcion}</p>
+          <a href="${enlace}" class="btn btn-primary mt-2 w-100">Ver más</a>
         </div>
       </div>
     `;
@@ -39,6 +53,7 @@ function cargarServicios() {
     contenedor.appendChild(tarjeta);
   });
 }
+
 
 function cargarProyectos() {
   fetch("proyectos.json")
